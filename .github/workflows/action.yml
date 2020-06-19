@@ -1,0 +1,8 @@
+name: GitHub Actions
+on: push
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Python dependencies
+      run: env
