@@ -7,4 +7,4 @@ jobs:
     - name: Debug env
       run: env
     - name: List current dir
-      run: ls
+      run: ls; pwd; echo *
