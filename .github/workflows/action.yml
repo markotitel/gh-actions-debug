@@ -5,9 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Set env from tag
+      run: echo "::set-env name=TAG::${GITHUB_REF##*/}"
     - name: Debug env
       run: env
     - name: List current dir
       run: ls; pwd; echo *
     - name: Python run
       run: python debug.py
+    - name: Run bash multiline
+      run: |
+        if [[ ${TAG%%-*} = "master" ]]
+          then
+            echo ${TAG}
+          else
+            echo "${TAG} ${TAG%%-*}"
+        fi
+          
