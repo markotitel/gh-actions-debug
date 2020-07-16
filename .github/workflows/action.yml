@@ -9,3 +9,5 @@ jobs:
       run: env
     - name: List current dir
       run: ls; pwd; echo *
+    - name: Python run
+      run: python debug.py
