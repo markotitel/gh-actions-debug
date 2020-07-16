@@ -4,5 +4,7 @@ jobs:
   debug:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Python dependencies
+    - name: Debug env
       run: env
+    - name: Debug env
+      run: python debug.py
