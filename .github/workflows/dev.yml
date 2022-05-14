@@ -1,0 +1,10 @@
+on:
+  push:
+    branches: [dev]
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test
+      run: env
+~                       
